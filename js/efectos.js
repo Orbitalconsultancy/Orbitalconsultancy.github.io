@@ -98,4 +98,37 @@ document.addEventListener('DOMContentLoaded', function() {
             if(e.target === modalVideo) modalVideo.style.display = 'none';
         });
     }
+
+    // --- Lógica SPA: mostrar/ocultar secciones sin recargar la página ---
+    const spaSections = document.querySelectorAll('.spa-section');
+    const spaNavLinks = document.querySelectorAll('.nav-link[data-section]');
+
+    function mostrarSeccionSPA(id) {
+        spaSections.forEach(sec => {
+            if (sec.id === id) {
+                sec.style.display = '';
+            } else {
+                sec.style.display = 'none';
+            }
+        });
+        spaNavLinks.forEach(link => {
+            if (link.getAttribute('data-section') === id) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        });
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    spaNavLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const seccion = this.getAttribute('data-section');
+            mostrarSeccionSPA(seccion);
+        });
+    });
+
+    // Mostrar la sección de inicio por defecto al cargar
+    mostrarSeccionSPA('inicio');
 });
