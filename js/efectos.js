@@ -30,6 +30,23 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 600 + i * 300);
     });
 
+    // Animación de fade-in para elementos con la clase animate-fadein (hero y logos)
+    const fadeInEls = document.querySelectorAll('.animate-fadein');
+    fadeInEls.forEach((el, i) => {
+        let delay = 0;
+        // Si el elemento tiene animation-delay en el style, úsalo
+        const styleDelay = el.style.animationDelay;
+        if (styleDelay && styleDelay.includes('s')) {
+            delay = parseFloat(styleDelay) * 1000;
+        } else {
+            delay = 400 + i * 200;
+        }
+        setTimeout(() => {
+            el.style.opacity = 1;
+            el.style.transform = 'translateY(0) scale(1)';
+        }, delay);
+    });
+
     // Navegación activa
     const navLinks = document.querySelectorAll('.nav-link');
     window.addEventListener('scroll', () => {
@@ -131,4 +148,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Mostrar la sección de inicio por defecto al cargar
     mostrarSeccionSPA('inicio');
+
+    // Microinteracción: scroll suave al hacer click en beneficio del inicio
+    const linksBeneficio = document.querySelectorAll('.link-beneficio');
+    linksBeneficio.forEach(el => {
+        el.addEventListener('click', function() {
+            const target = document.querySelector(this.dataset.target);
+            if(target) {
+                target.style.display = '';
+                window.scrollTo({
+                    top: target.offsetTop - 60,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
 });

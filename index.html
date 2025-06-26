@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Orbital Consultancy | Web, IA y Consultoría</title>
     <link rel="stylesheet" href="css/estilos.css">
+    <!-- Google Fonts Futurista -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
 </head>
-<body>
-    <nav class="navbar">
+<body class="futurista-bg">
+    <nav class="navbar glass-navbar animate-navbar">
         <ul>
             <li><a href="#inicio" class="nav-link" data-section="inicio">Inicio</a></li>
             <li><a href="#servicios" class="nav-link" data-section="servicios">Servicios</a></li>
@@ -18,36 +20,73 @@
         </ul>
     </nav>
     <main>
-        <section id="inicio" class="spa-section">
-            <div class="logo-container" style="margin-bottom:1.5rem;">
-                <img src="img/OrbitalConsultancyLogo.png" alt="Logo Orbital Consultancy" class="logo" style="background:#fff; border-radius:16px; box-shadow:0 2px 12px #b8000044; padding:8px 20px; max-width:160px; max-height:80px; display:block; margin:auto;">
+        <!-- HERO INICIO CON FONDO ANIMADO, TITULO NEON (SIN CTA DESTACADO) -->
+        <section id="inicio" class="spa-section hero-futurista">
+            <div class="fondo-animado" aria-hidden="true"></div>
+            <div class="logo-container">
+                <img src="img/OrbitalConsultancyLogo.png" alt="Logo Orbital Consultancy" class="logo">
             </div>
-            <h1 class="titulo-impacto" style="text-align:center; font-size:2.1rem; margin-bottom:0.7rem;">Impulsa tu empresa con tecnología, estrategia y automatización inteligente</h1>
-            <p class="subtitulo-impacto" style="text-align:center; max-width:600px; margin:0 auto 1.7rem auto; font-size:1.13rem;">
-                Llevamos a tu empresa al siguiente nivel: creamos páginas web que generan clientes y automatizamos procesos con agentes IA, para que tu compañía crezca, innove y se diferencie en el mercado. Soluciones a medida, acompañamiento experto y resultados reales para empresarios visionarios.
-            </p>
-            <div class="inicio-beneficios" style="justify-content:center;">
-                <div class="beneficio-item">
-                    <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=400&q=80" alt="Webs modernas y efectivas" class="icono-beneficio" style="border-radius:8px;object-fit:cover;">
-                    <span>Webs modernas y efectivas</span>
+            <h1 class="titulo-impacto neon-text animate-fadein">Impulsa tu empresa con tecnología, estrategia y automatización inteligente</h1>
+            <p class="subtitulo-impacto animate-fadein" style="animation-delay:0.2s;">Llevamos a tu empresa al siguiente nivel: creamos páginas web que generan clientes y automatizamos procesos con agentes IA, para que tu compañía crezca, innove y se diferencie en el mercado. Soluciones a medida, acompañamiento experto y resultados reales para empresarios visionarios.</p>
+            <div class="inicio-beneficios tarjetas-3d animate-fadein" style="animation-delay:0.6s; display: flex; justify-content: center; gap: 2.5rem; flex-wrap: wrap;">
+                <!-- Eliminar el cuadro de 'Nuestra Marca' -->
+                <div class="beneficio-item link-beneficio" data-target="#servicios" style="cursor:pointer; display:flex; flex-direction:column; align-items:center; min-width:180px; max-width:220px;">
+                    <div style="display:flex; gap:8px; align-items:center; justify-content:center;">
+                        <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=400&q=80" alt="Webs modernas y efectivas" class="icono-beneficio" style="border-radius:8px;object-fit:cover; width:38px; height:38px;">
+                        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/n8n.svg" alt="Automatización con IA" class="icono-beneficio" style="background:#fff;border-radius:8px;padding:4px; width:38px; height:38px;">
+                    </div>
+                    <h4 class="beneficio-titulo">Webs modernas &amp; Automatización IA</h4>
+                    <span style="font-size:0.97rem; color:#232323; margin-top:0.3rem; text-align:center; line-height:1.2;">Desarrollamos sitios que atraen clientes y automatizamos procesos para tu empresa con IA de última generación.</span>
                 </div>
-                <div class="beneficio-item">
-                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/n8n.svg" alt="Automatización con IA" class="icono-beneficio" style="background:#fff;border-radius:8px;padding:4px;">
-                    <span>Automatización con IA</span>
+                <div class="beneficio-item link-beneficio" data-target="#portafolio" style="cursor:pointer; display:flex; flex-direction:column; align-items:center; min-width:180px; max-width:220px;">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Portafolio y Clientes" class="icono-beneficio" style="background:#fff;border-radius:8px;padding:4px; width:38px; height:38px;object-fit:cover;">
+                    <h4 class="beneficio-titulo">Portafolio &amp; Clientes</h4>
+                    <span style="font-size:0.97rem; color:#232323; margin-top:0.3rem; text-align:center; line-height:1.2;">Descubre casos reales, proyectos destacados y empresas que han confiado en nosotros.</span>
                 </div>
-                <div class="beneficio-item">
-                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Estrategia y acompañamiento" class="icono-beneficio" style="border-radius:8px;object-fit:cover;">
-                    <span>Estrategia y acompañamiento</span>
-                </div>
-                <div class="beneficio-item">
+                <div class="beneficio-item link-beneficio" data-target="#quienes-somos" style="cursor:pointer;">
                     <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q=80" alt="Soporte y evolución continua" class="icono-beneficio" style="border-radius:8px;object-fit:cover;">
-                    <span>Soporte y evolución continua</span>
+                    <h4 class="beneficio-titulo">Soporte y evolución continua</h4>
+                    <span style="font-size:0.97rem; color:#232323; margin-top:0.3rem; text-align:center; line-height:1.2;">Acompañamiento experto, soporte ágil y mejoras constantes para tu tranquilidad y crecimiento.</span>
+                </div>
+            </div>
+            <div class="inicio-videos-premium animate-fadein">
+                <div class="video-block-premium">
+                    <video src="videos/Agente IA.mp4" autoplay loop muted playsinline poster="img/OrbitalConsultancyLogo.png"></video>
+                    <h3 class="video-title">Agente IA</h3>
+                </div>
+                <div class="video-block-premium">
+                    <video src="videos/Pagina web.mp4" autoplay loop muted playsinline poster="img/OrbitalConsultancyLogo.png"></video>
+                    <h3 class="video-title">Página web</h3>
                 </div>
             </div>
         </section>
-        <section id="servicios" class="spa-section servicios-bg-logo" style="display:none;">
+        <!-- BLOQUE DE LOGOS DE CLIENTES/PARTNERS -->
+        <!-- <div class="clientes-logos-bar animate-fadein" style="animation-delay:0.8s;">
+            <span class="clientes-title">Confían en nosotros:</span>
+            <img src="img/Flat.png" alt="Flat119" class="logo-cliente" style="height:38px;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft" class="logo-cliente" style="height:32px;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" class="logo-cliente" style="height:32px;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix" class="logo-cliente" style="height:32px;">
+            <!-- Puedes añadir más logos reales de clientes/partners aquí -->
+        <!-- </div> -->
+        <!-- SEPARADOR SVG ONDULADO CON GRADIENTE MORADO/CIAN -->
+        <div class="separador-svg">
+            <svg viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="separadorGradient" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0%" stop-color="#23232a" stop-opacity="0.7"/>
+                    <stop offset="40%" stop-color="#a259ff" stop-opacity="0.25"/>
+                    <stop offset="80%" stop-color="#00eaff" stop-opacity="0.18"/>
+                    <stop offset="100%" stop-color="#23232a" stop-opacity="0.7"/>
+                  </linearGradient>
+                </defs>
+                <path d="M0,60 C480,120 960,0 1440,60 L1440,100 L0,100 Z" fill="url(#separadorGradient)"/>
+            </svg>
+        </div>
+        <!-- FIN SEPARADOR SVG CON GRADIENTE -->
+        <section id="servicios" class="spa-section servicios-bg-logo futurista-section" style="display:none;">
             <h2>Servicios</h2>
-            <div class="servicios-grupo">
+            <div class="servicios-grupo" style="align-items: stretch;">
                 <div class="servicios-web">
                     <h3>Páginas Web</h3>
                     <div class="cuadros-ia">
@@ -68,8 +107,11 @@
                             <p>Optimizamos tu sitio para buscadores y garantizamos tiempos de carga rápidos para mejorar tu posicionamiento y conversión.</p>
                         </div>
                     </div>
+                    <div class="detalle-web-premium fade-in" style="margin-top:1.5rem;">
+                        <p><strong>¿Sabías que una página web profesional es mucho más que un simple escaparate digital?</strong> Las webs de Orbital Consultancy están diseñadas para captar clientes, transmitir confianza y diferenciar tu empresa en el mercado. No solo se ven increíbles: son rápidas, seguras, adaptables y optimizadas para convertir visitantes en oportunidades reales de negocio.</p>
+                    </div>
                 </div>
-                <div class="servicios-ia">
+                <div class="servicios-ia" onmouseenter="this.querySelector('.detalle-agentes').style.opacity=1;this.querySelector('.detalle-agentes').style.pointerEvents='auto';" onmouseleave="this.querySelector('.detalle-agentes').style.opacity=0;this.querySelector('.detalle-agentes').style.pointerEvents='none';" style="position:relative; min-height:420px; display:flex; flex-direction:column; justify-content:flex-end;">
                     <h3>Agentes de IA para Empresas</h3>
                     <div class="cuadros-ia">
                         <div class="cuadro">
@@ -89,8 +131,8 @@
                             <p>Integramos tus agentes IA con web, WhatsApp, redes sociales y sistemas empresariales para una experiencia unificada.</p>
                         </div>
                     </div>
-                    <div class="detalle-agentes fade-in" style="margin-top:1.5rem;">
-                        <p><strong>¿Sabías que un agente IA va mucho más allá de un chatbot tradicional?</strong> Mientras los chatbots suelen responder solo a palabras clave y plantillas predefinidas, los agentes inteligentes de Orbital Consultancy comprenden el lenguaje natural, mantienen el contexto de la conversación y se adaptan a las necesidades de tu negocio. Son como un empleado digital que trabaja 24/7, aprende y evoluciona con tu empresa.</p>
+                    <div class="detalle-agentes detalle-web-premium fade-in" style="margin-top:1.5rem; opacity:0; pointer-events:none; transition:opacity 0.5s; position:static; width:100%; box-sizing:border-box; align-self:flex-end;">
+                        <p style="margin:0;"><strong>¿Sabías que un agente IA va mucho más allá de un chatbot tradicional?</strong> Mientras los chatbots suelen responder solo a palabras clave y plantillas predefinidas, los agentes inteligentes de Orbital Consultancy comprenden el lenguaje natural, mantienen el contexto de la conversación y se adaptan a las necesidades de tu negocio. Son como un empleado digital que trabaja 24/7, aprende y evoluciona con tu empresa.</p>
                     </div>
                 </div>
             </div>
@@ -105,7 +147,10 @@
                 </ul>
             </div>
         </section>
-        <section id="portafolio" class="spa-section" style="display:none;">
+        <div class="separador-svg flip">
+            <svg viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,60 C480,0 960,120 1440,60 L1440,100 L0,100 Z" fill="#181c2b"/></svg>
+        </div>
+        <section id="portafolio" class="spa-section futurista-section" style="display:none;">
             <h2>Portafolio Destacado</h2>
             <div class="proyectos">
                 <div class="proyecto fade-in">
@@ -123,7 +168,10 @@
                 </div>
             </div>
         </section>
-        <section id="quienes-somos" class="spa-section" style="display:none;">
+        <div class="separador-svg">
+            <svg viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,60 C480,120 960,0 1440,60 L1440,100 L0,100 Z" fill="#181c2b"/></svg>
+        </div>
+        <section id="quienes-somos" class="spa-section futurista-section" style="display:none;">
             <h2>Quiénes Somos</h2>
             <div class="quienes-somos-content">
                 <p>Somos un equipo apasionado por la innovación digital y la inteligencia artificial. Nuestra misión es transformar empresas como la tuya con soluciones web modernas y agentes IA que automatizan, potencian y personalizan la experiencia de tus clientes.</p>
@@ -142,15 +190,14 @@
                             <span class="contador" id="contador-experiencia" data-numero="15">0</span>
                             <p>Años de Experiencia</p>
                         </div>
-                        <div class="contador-item">
-                            <span class="contador" data-numero="10">0</span>
-                            <p>Clientes Satisfechos</p>
-                        </div>
                     </div>
                 </section>
             </div>
         </section>
-        <section id="faq" class="spa-section" style="display:none;">
+        <div class="separador-svg flip">
+            <svg viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,60 C480,0 960,120 1440,60 L1440,100 L0,100 Z" fill="#181c2b"/></svg>
+        </div>
+        <section id="faq" class="spa-section futurista-section" style="display:none;">
             <h2>Preguntas Frecuentes</h2>
             <div class="acordeon">
                 <div class="faq-item">
@@ -167,49 +214,51 @@
                 </div>
             </div>
         </section>
-        <section id="contacto" class="spa-section" style="display:none;">
-            <h2 class="anuncio-titulo">¿Listo para transformar tu empresa?</h2>
+        <div class="separador-svg">
+            <svg viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,60 C480,120 960,0 1440,60 L1440,100 L0,100 Z" fill="#181c2b"/></svg>
+        </div>
+        <section id="contacto" class="spa-section futurista-section" style="display:none;">
+            <h2 class="anuncio-titulo neon-text">¿Listo para transformar tu empresa?</h2>
             <p class="contacto-subtitulo">Agenda una llamada estratégica o escríbenos. Nuestro equipo te asesorará personalmente para potenciar tu negocio con web e IA.</p>
             <div class="contacto-flex premium-contacto">
-                <form class="form-contacto fade-in premium-form" id="form-contacto" novalidate>
-                    <div class="form-row">
-                        <input type="text" name="nombre" placeholder="Nombre completo*" required>
-                        <input type="text" name="empresa" placeholder="Empresa (opcional)">
+                <div class="formulario-contacto-minimal">
+                    <form class="form-contacto fade-in premium-form" id="form-contacto" novalidate>
+                        <div class="form-row">
+                            <input type="text" name="nombre" placeholder="Nombre completo*" required>
+                            <input type="text" name="empresa" placeholder="Empresa (opcional)">
+                        </div>
+                        <div class="form-row">
+                            <input type="text" name="cargo" placeholder="Cargo (opcional)">
+                            <input type="email" name="email" placeholder="Correo electrónico*" required>
+                        </div>
+                        <div class="form-row">
+                            <input type="tel" name="telefono" placeholder="Teléfono (opcional)">
+                            <select name="preferencia_contacto" style="min-width:180px;">
+                                <option value="">¿Cómo prefieres que te contactemos?</option>
+                                <option value="email">Por Email</option>
+                                <option value="whatsapp">Por WhatsApp</option>
+                                <option value="llamada">Llamada Telefónica</option>
+                            </select>
+                        </div>
+                        <textarea name="mensaje" placeholder="¿En qué podemos ayudarte?*" required></textarea>
+                        <div class="privacidad-microcopy">Tus datos están seguros. Solo los usaremos para responderte.</div>
+                        <button type="submit" class="btn-contacto premium-btn"><span>Enviar mensaje</span> <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/minutemailer.svg" alt="Enviar" style="width:18px;height:18px;vertical-align:middle;margin-left:6px;"></button>
+                        <div class="mensaje-exito" id="mensaje-exito" style="display:none;">¡Gracias! Te contactaremos pronto.</div>
+                        <div class="mensaje-cargando" id="mensaje-cargando" style="display:none;">Enviando...</div>
+                        <div class="mensaje-error" id="mensaje-error" style="display:none;color:#b80000;margin-top:0.7rem;"></div>
+                    </form>
+                    <div class="testimonio-contacto premium-testimonio-minimal">
+                        <img src="img/Flat.png" alt="Cliente Satisfecho" style="width:44px;height:44px;border-radius:50%;object-fit:cover;vertical-align:middle;">
+                        <span class="comentario-cliente">“El equipo de Orbital Consultancy nos ayudó a digitalizar y automatizar nuestro negocio. ¡100% recomendados!”</span>
                     </div>
-                    <div class="form-row">
-                        <input type="text" name="cargo" placeholder="Cargo (opcional)">
-                        <input type="email" name="email" placeholder="Correo electrónico*" required>
-                    </div>
-                    <div class="form-row">
-                        <input type="tel" name="telefono" placeholder="Teléfono (opcional)">
-                        <select name="preferencia_contacto" style="min-width:180px;">
-                            <option value="">¿Cómo prefieres que te contactemos?</option>
-                            <option value="email">Por Email</option>
-                            <option value="whatsapp">Por WhatsApp</option>
-                            <option value="llamada">Llamada Telefónica</option>
-                        </select>
-                    </div>
-                    <textarea name="mensaje" placeholder="¿En qué podemos ayudarte?*" required></textarea>
-                    <div class="privacidad-microcopy">Tus datos están seguros. Solo los usaremos para responderte.</div>
-                    <button type="submit" class="btn-contacto premium-btn"><span>Enviar mensaje</span> <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/minutemailer.svg" alt="Enviar" style="width:18px;height:18px;vertical-align:middle;margin-left:6px;"></button>
-                    <div class="mensaje-exito" id="mensaje-exito" style="display:none;">¡Gracias! Te contactaremos pronto.</div>
-                    <div class="mensaje-cargando" id="mensaje-cargando" style="display:none;">Enviando...</div>
-                    <div class="mensaje-error" id="mensaje-error" style="display:none;color:#b80000;margin-top:0.7rem;"></div>
-                </form>
-                <div class="contacto-info premium-info">
-                    <div class="testimonio-contacto premium-testimonio" style="margin-top:1.2rem;">
-                        <img src="img/Flat.png" alt="Cliente Satisfecho" style="width:48px;height:48px;border-radius:50%;object-fit:cover;vertical-align:middle;margin-right:10px;">
-                        <span style="font-size:1.05rem;vertical-align:middle;">“El equipo de Orbital Consultancy nos ayudó a digitalizar y automatizar nuestro negocio. ¡100% recomendados!”</span>
-                    </div>
-                    <p class="contacto-microcopy" style="margin-top:2.2rem;">Respuestas en menos de 24h. Atención personalizada para empresas y empresarios.</p>
                 </div>
             </div>
         </section>
-        <a href="https://wa.me/573208746205" class="whatsapp-float" target="_blank" title="Contáctanos por WhatsApp">
+        <a href="https://wa.me/573208746205" class="whatsapp-float glow-btn" target="_blank" title="Contáctanos por WhatsApp">
             <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp" class="whatsapp-icon">
         </a>
     </main>
-    <footer>
+    <footer class="futurista-footer">
         <p>&copy; 2025 Orbital Consultancy</p>
     </footer>
     <script src="js/efectos.js"></script>
@@ -224,6 +273,21 @@
         contador.setAttribute('data-numero', experiencia);
         contador.innerText = experiencia;
     }
+
+    // Sumar proyectos web y agentes IA del portafolio
+    const portafolio = document.querySelectorAll('.proyecto');
+    let totalWeb = 0;
+    let totalIA = 0;
+    portafolio.forEach(proj => {
+        const titulo = proj.querySelector('h3')?.textContent?.toLowerCase() || '';
+        if (titulo.includes('web')) totalWeb++;
+        if (titulo.includes('ia')) totalIA++;
+    });
+    // Actualizar contadores
+    const contadorWeb = document.querySelectorAll('.contador')[0];
+    const contadorIA = document.querySelectorAll('.contador')[1];
+    if (contadorWeb) contadorWeb.innerText = totalWeb;
+    if (contadorIA) contadorIA.innerText = totalIA;
 })();
 </script>
 <script>
@@ -267,6 +331,32 @@
             exito.style.display = 'block';
             form.reset();
         }, 1800);
+    });
+})();
+</script>
+<script>
+(function() {
+    // Ajuste de scroll para navegación SPA
+    const navbar = document.querySelector('.navbar');
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            const sectionId = this.getAttribute('href');
+            const section = document.querySelector(sectionId);
+            if (section) {
+                e.preventDefault();
+                // Mostrar solo la sección seleccionada
+                document.querySelectorAll('.spa-section').forEach(sec => sec.style.display = 'none');
+                section.style.display = '';
+                // Forzar scroll al tope de la página (sin scroll extra)
+                setTimeout(function() {
+                    // Si la sección es más baja que la ventana, no hacer scroll
+                    if (document.body.scrollHeight > window.innerHeight) {
+                        window.scrollTo({ top: 0, behavior: 'auto' });
+                    }
+                }, 10);
+            }
+        });
     });
 })();
 </script>
